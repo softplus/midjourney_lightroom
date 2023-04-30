@@ -1,7 +1,10 @@
-# discord-mj-lr
+# midjourney_lightroom
+
 Pipeline for taking Midjourney images from Discord to Lightroom automatically
 
 This runs as a bot within Discord. It picks up images created by Midjourney, splits preview images into parts, and then adds them all to your Lighthouse CC cloud storage. Drop a bunch of prompts into Discord, receive images in Lighthouse!
+
+(c) 2023 John Mueller, MIT license
 
 ## setup
 
