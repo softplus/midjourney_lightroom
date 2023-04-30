@@ -1,0 +1,6 @@
+git+https://github.com/softplus/lightroom-cc-api.git
+Pillow
+discord.py
+python-dotenv
+requests
+piexif
