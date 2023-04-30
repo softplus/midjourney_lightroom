@@ -4,7 +4,8 @@ Pipeline for taking Midjourney images from Discord to Lightroom automatically
 
 This runs as a bot within Discord. It picks up images created by Midjourney, splits preview images into parts, and then adds them all to your Lighthouse CC cloud storage. Drop a bunch of prompts into Discord, receive images in Lighthouse!
 
-(c) 2023 John Mueller, MIT license
+(c) 2023 John Mueller, MIT license.
+https://github.com/softplus/ & https://johnmu.com/
 
 ## setup
 
@@ -29,7 +30,7 @@ Overview of setup:
 - Enter the bot key
 - Enter the Lighthouse client id & client secret
 - Type 'hi!' into Discord to trigger the bot
-- Authenticate with Lighthouse for your account
+- Authenticate with Lighthouse for your account (repeat daily)
 - Start making images!
 
 ## Usage
@@ -47,6 +48,10 @@ python3 main_script.py
 * make google photos version?
 * set album via chat command
 * auto-do album via prompt, eg "#albumname::0" in prompt
+* make sample Google Form
+* document bot-making process with screenshots
+* document LH-key getting with screenshots
+* document authenticating with screenshots
 
 ## Done
 
