@@ -33,6 +33,8 @@ Overview of setup:
 - Authenticate with Lighthouse for your account (repeat daily)
 - Start making images!
 
+For a full guide in setting this up, see https://johnmu.com/2023-midjourney-to-lightoom/
+
 ## Usage
 
 ```bash
