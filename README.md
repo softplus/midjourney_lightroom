@@ -50,10 +50,6 @@ python3 main_script.py
 * make google photos version?
 * set album via chat command
 * auto-do album via prompt, eg "#albumname::0" in prompt
-* make sample Google Form
-* document bot-making process with screenshots
-* document LH-key getting with screenshots
-* document authenticating with screenshots
 
 ## Done
 
