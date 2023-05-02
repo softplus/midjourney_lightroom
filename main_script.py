@@ -162,6 +162,15 @@ def upload_to_form(data_values):
     # ignore response
 
 
+# deal with ctrl-c
+def sigint_handler(signum, frame):
+    """Handle SIGINT"""
+    print("ctrl-c caught, closing down.")
+    quit() 
+signal.signal(signal.SIGINT, sigint_handler)
+
+
+# the main kazoo
 async def process_image_attachment(url, filename, message=None):
     """Do all the things"""
     global config, lr_api, lr_catalog, dir_output
