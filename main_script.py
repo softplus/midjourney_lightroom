@@ -11,6 +11,7 @@ import base64
 import dotenv
 import hashlib
 import requests
+import signal
 import discord
 import piexif
 import piexif.helper
@@ -73,6 +74,11 @@ if config_missing("LR_CLIENT_ID", "CLIENT_ID"):
 if config_missing("FILE_SALT", "..."):
     print("Creating new salt for random file names.")
     config_update("FILE_SALT", str(uuid.uuid1()))
+
+# check whether to keep the files
+if config_missing("KEEP_FILES"):
+    print("Defaulting to keep all files, set KEEP_FILES='0' otherwise")
+    config_update("KEEP_FILES", str(1))
 
 def lightroom_login():
     """Attempt to do Lightroom login, return error text if not."""
@@ -200,7 +206,14 @@ async def process_image_attachment(url, filename, message=None):
             piexif.ImageIFD.TargetPrinter: infos["new_guid"]
         }
         exif_bytes = piexif.dump({"0th": ifd_0})
-        img.save(os.path.join(dir_output, f"{file_prefix}_{index}.jpg"), exif=exif_bytes)
+
+        # store locally
+        if config["KEEP_FILES"]=="1":
+            img.save(os.path.join(dir_output,
+                                  f"{file_prefix}_{index}.jpg"),
+                                  exif=exif_bytes)
+            
+        # upload to Lightroom
         try:
             asset_id = lr_catalog.create_new_asset_from_file(
                 infos["new_guid"]+".png", "image", 
