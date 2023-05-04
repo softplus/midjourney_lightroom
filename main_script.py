@@ -1,3 +1,5 @@
+#!/bin/python3
+
 # Copyright 2023, John Mueller
 # MIT License, see LICENSE file
 # SPDX-FileCopyrightText: 2023 John Mueller
