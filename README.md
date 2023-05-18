@@ -46,7 +46,7 @@ python3 main_script.py
 ## Todo
 
 * write readme file
-* explain how to get keys
+* auto-backtrace to last imported image
 * make google photos version?
 * set album via chat command
 * auto-do album via prompt, eg "#albumname::0" in prompt
@@ -56,6 +56,7 @@ python3 main_script.py
 * include glitch.com HTML + CSS
 * test with zero settings
 * clean up code
+* explain how to get keys
 * ask user for auth-codes if needed
 * ask for re-auth in chat when needed
 * Skip Upscaled images, we have them already
